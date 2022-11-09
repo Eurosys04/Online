@@ -21,7 +21,6 @@ import { PriceComponent } from './components/staticComponents/price/price.compon
 import { AboutComponent } from './components/staticComponents/about/about.component';
 import { ProductsComponent } from './components/staticComponents/products/products.component';
 import { NewsComponent } from './components/staticComponents/news/news.component';
-import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
