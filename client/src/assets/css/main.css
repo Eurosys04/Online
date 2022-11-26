@@ -345,6 +345,11 @@ ul.nostyle i {
   background: #222534;
   border-radius: 3px;
 }
+
+.footer_content{
+    font-size:16px;
+}
+
 .divider {
   margin-top: 50px;
   margin-bottom: 50px;
