@@ -7,12 +7,10 @@
   </div>
 </section>
 <section id="contact">
-  <div id="google-map" style="height:650px" data-latitude="42.693302" data-longitude="23.323356"></div>
-  <div class="container-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4 col-sm-offset-8">
-          <div class="contact-form">
+        <div class="col-sm-12">
+          <form (ngSubmit)="OnSubmit()" [formGroup]="playlistForm" class="contact-form">
             <h3>За контакти</h3>
             <address>
               <strong>Местоположение:</strong><br>
@@ -40,9 +38,9 @@
               </div>
               <button type="submit" class="btn btn-primary">Send Message</button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>
-  </div>
 </section>
+
