@@ -2,45 +2,46 @@
   <div class="container">
     <div class="section-header">
       <h2 class="section-title text-center wow fadeInDown">Свържете се с нас</h2>
-      <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+      <p class="text-center wow fadeInDown">
+        Местоположение: София - 1000, ул. "Граф Игнатиев" &#8470;9, вх. Б<br> Тел.: 02 123456789
     </div>
   </div>
 </section>
 <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <form (ngSubmit)="OnSubmit()" [formGroup]="playlistForm" class="contact-form">
-            <h3>За контакти</h3>
-            <address>
-              <strong>Местоположение:</strong><br>
-              София - 1000, ул. "Граф Игнатиев" &#8470;9, вх. Б<br>
-              България<br>
-              <abbr title="Phone">Тел.:</abbr> 02 123456789
-            </address>
-            <div id="main-contact-form" name="contact-form" method="post"
-                 action="sendemail.php">
-              <div class="form-group">
-                <input name="name" class="form-control"
-                       placeholder="Name" required="" type="text">
-              </div>
-              <div class="form-group">
-                <input name="email" class="form-control"
-                       placeholder="E-mail" required="" type="email">
-              </div>
-              <div class="form-group">
-                <input name="subject" class="form-control"
-                       placeholder="Subject" required="" type="text">
-              </div>
-              <div class="form-group">
-                <textarea name="message" class="form-control"
-                          rows="8" placeholder="Message" required=""></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <form (ngSubmit)="OnSubmit()" [formGroup]="contactForm" class="contact-form">
+          <h3>За контакти</h3>
+          <div id="main-contact-form" name="contact-form"
+               action="sendemail.php">
+            <!-- <div class="form-group">
+            <input name="name" class="form-control"
+                   placeholder="Name" formControlName="name" type="text">
+          </div>-->
+            <div class="form-group">
+              <input name="from" class="form-control"
+                     placeholder="E-mail" formControlName="to" type="email">
             </div>
-          </form>
-        </div>
+            <div class="form-group">
+              <input name="subject" class="form-control"
+                     placeholder="Относно" formControlName="subject" type="text">
+            </div>
+            <div class="form-group">
+              <textarea name="message" class="form-control"
+                        rows="8" placeholder="Съобщение" formControlName="body" required=""></textarea>
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-1 col-sm-offset-9">
+                  <button type="submit" class="btn btn-primary">Изпрати</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
+  </div>
 </section>
 
